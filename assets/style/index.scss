@@ -1,13 +1,17 @@
-@import "./colors";
-@import "./fonts";
-@import "./mixins";
+@import "./_colors";
+@import "./_fonts";
+@import "./_mixins";
 
 body {
     display: flex;
 }
 
+.square {
+  flex-wrap: wrap;
+}
+
 .box__body {
-    background-color: rgb(124, 113, 180);
+    background-color: map-get($colors, purple);
     width: 350px;
     height: 350px;
     margin: 100px;
@@ -40,19 +44,18 @@ body {
 
   @media (prefers-color-scheme: dark) {
       .box__body {
-          background-color: darken(rgb(140, 130, 190), 25%);
+          background-color: darken(map-get($colors, purple), 5%);
       }
       body {
-          background-color: rgb(20, 20, 20)
+          background-color: map-get($colors, black);
       }
   } 
 
   @media (prefers-color-scheme: light) {
       .box__body {
-          background-color: rgb(124, 113, 180);
+          background-color: map-get($colors, purple);
       }
   }
-
 
 
   
