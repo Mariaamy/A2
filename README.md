@@ -9,7 +9,7 @@ The project task covered in this repository is given to us through NTNU's webdev
 These goals can be found here: https://sdgs.un.org/goals
 
 
-This project will cover Sustainability Goal xx, and implemented, will present a scrollytelling website, which will broadcast information about and offer a useful learning source about the said goal and how we can achieve it.
+This project will cover Sustainability Goal 12, and implemented, will present a scrollytelling website, which will broadcast information about and offer a useful learning source about the said goal and how we can achieve it.
 
 
 Users can implement this project by downloading a zip folder of the repository which is located in the menu under the green button, "code", on the top right corner of the project window. Preferably, the user will unzip the file and open the file with code, to access all of the material.
