@@ -106,3 +106,52 @@ body {
   }
   
 }
+
+.box3__body {
+  width: 200px;
+  height: 200px;
+  margin: 100px;
+  background-color:orange;
+  animation:breathe 5s infinite alternate;
+}
+
+  @keyframes breathe {
+    from {
+    transform:scale(0);
+    }
+    to {
+      transform:scale(1.5);
+    }
+  }
+
+  @media (prefers-color-scheme:dark) { 
+    .box3__body {
+      background-color:darkblue;
+    }
+  }
+
+  @media (prefers-color-scheme:light) {
+    .box3__body {
+      background-color: rgb(121, 121, 58);
+    }
+  }
+
+  @media (orientation:landscape) {
+    .box3__body {
+      flex-direction: row;
+    }
+  }
+
+  @media (orientation:portrait) {
+    .box3__body {
+      flex-direction: column;
+      background-color: green;
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    .box3__body {
+      animation:none;
+      background-color:rgb(117, 68, 76);
+    }
+  }
