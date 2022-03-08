@@ -1,0 +1,72 @@
+@import "./colors";
+
+.box {
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+  }
+  
+  .box__body--purple {
+    background-color: map-get($colors, purple);
+    animation: rotate 10s linear infinite;
+    }
+    
+  .box__body--pink {
+    background-color: rgb(255, 85, 227);
+    animation: resizing 3s linear infinite;
+    }
+  
+  .box__body--green {
+    background-color: orange;
+    animation: breathe 5s infinite alternate;
+  }
+  
+  @media (orientation: landscape) {
+    body {
+      flex-direction: row;
+    }
+  }
+  
+  @media (orientation: portrait) {
+    body {
+      flex-direction: column;
+    }
+  }
+  
+  @media (prefers-reduced-motion) {
+    .box {
+      animation: none;
+    } 
+  }
+    
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: map-get($colors, black);
+    }
+  
+    .box__body--purple {
+      background-color: darken(map-get($colors, purple), 5%);
+    }
+  
+    .box__body--pink {
+      background-color: darken(rgb(255, 85, 227), 20%);
+    }
+  
+    .box__body--green {
+      background-color:darkblue;
+    } 
+  } 
+  
+  @media (prefers-color-scheme: light) {
+    .box__body--purple {
+      background-color: map-get($colors, purple);
+    }
+  
+    .box__body--pink {
+      background-color: rgb(255, 85, 227);
+    }
+  
+    .box__body--green {
+      background-color: rgb(121, 121, 58);
+    }
+}

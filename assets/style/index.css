@@ -1,43 +1,25 @@
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.square {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.box__body {
-  background-color: #612592;
-  width: 350px;
-  height: 350px;
+.box {
+  height: 200px;
+  width: 200px;
   margin: 100px;
-  -webkit-animation: rotate 10s linear 2s infinite;
-          animation: rotate 10s linear 2s infinite;
 }
 
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
+.box__body--purple {
+  background-color: #612592;
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite;
 }
 
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
+.box__body--pink {
+  background-color: #ff55e3;
+  -webkit-animation: resizing 3s linear infinite;
+          animation: resizing 3s linear infinite;
+}
+
+.box__body--green {
+  background-color: orange;
+  -webkit-animation: breathe 5s infinite alternate;
+          animation: breathe 5s infinite alternate;
 }
 
 @media (orientation: landscape) {
@@ -59,34 +41,37 @@ body {
 }
 
 @media (prefers-reduced-motion) {
-  .box__body {
+  .box {
     -webkit-animation: none;
             animation: none;
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  .box__body {
-    background-color: #53207e;
-  }
   body {
     background-color: #000;
+  }
+  .box__body--purple {
+    background-color: #53207e;
+  }
+  .box__body--pink {
+    background-color: #ee00c7;
+  }
+  .box__body--green {
+    background-color: darkblue;
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .box__body {
+  .box__body--purple {
     background-color: #612592;
   }
-}
-
-.box2__body {
-  background-color: #ff55e3;
-  height: 200px;
-  width: 200px;
-  margin: 100px;
-  -webkit-animation: resizing 3s linear infinite;
-          animation: resizing 3s linear infinite;
+  .box__body--pink {
+    background-color: #ff55e3;
+  }
+  .box__body--green {
+    background-color: #79793a;
+  }
 }
 
 @-webkit-keyframes resizing {
@@ -119,55 +104,6 @@ body {
   }
 }
 
-@media (orientation: landscape) {
-  body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (orientation: portrait) {
-  body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .box2__body {
-    -webkit-animation: none;
-            animation: none;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .box2__body {
-    background-color: #ee00c7;
-  }
-  body {
-    background-color: #141414;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .box2__body {
-    background-color: #ff55e3;
-  }
-}
-
-.box3__body {
-  width: 200px;
-  height: 200px;
-  margin: 100px;
-  background-color: orange;
-  -webkit-animation: breathe 5s infinite alternate;
-          animation: breathe 5s infinite alternate;
-}
-
 @-webkit-keyframes breathe {
   from {
     -webkit-transform: scale(0);
@@ -190,42 +126,31 @@ body {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .box3__body {
-    background-color: darkblue;
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
-@media (prefers-color-scheme: light) {
-  .box3__body {
-    background-color: #79793a;
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
-@media (orientation: landscape) {
-  .box3__body {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (orientation: portrait) {
-  .box3__body {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: green;
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .box3__body {
-    -webkit-animation: none;
-            animation: none;
-    background-color: #75444c;
-  }
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=index.css.map */

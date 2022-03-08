@@ -1,0 +1,15 @@
+@keyframes resizing {
+    0% { transform:scaleX(1); }
+    50% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+
+  @keyframes breathe {
+    from { transform:scale(0); }
+    to { transform:scale(1.5); }
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+  }
